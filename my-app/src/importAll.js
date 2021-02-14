@@ -1,14 +1,49 @@
 import React from 'react';
-import * from './images'
 
-function importAll(r) {
-    let images = {};
-    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
-    return images;
+function importAll() {
+  const path = '11'
+  // console.log(path);
+  const products = [
+    {
+      name: 'James',
+      age: 31,
+    },
+    {
+      name: 'John',
+      age: 45,
+    },
+    {
+      name: 'Paul',
+      age: 65,
+    },
+    {
+      name: 'Ringo',
+      age: 49,
+    },
+    {
+      name: 'George',
+      age: 34,
+    }
+  ];
+  
+  return (
+    <div>
+      
+      {products.filter(products => products.image).map(filteredProducts => (
+        <li>
+          {filteredProducts.image} 
+        </li>
+      ))}
+    </div>
+  );
   }
   
-  const images = importAll(require.context('./images', false, /\.(png|jpe?g|svg)$/));
-  
-//   <img src={images['doggy.png']} />
 
-  export {importAll}; 
+  
+
+
+  export {importAll};   
+
+  
+
+
