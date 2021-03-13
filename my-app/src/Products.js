@@ -30,21 +30,12 @@ function Products(){
       } else if (!isLoaded) {
         return <div>Загрузка...</div>;
       } else {
-        return (
-    
-       
+        return (           
                 <div className='thumbs-wrapper'>
                     {products.map(item => (
                     <a href='#' className='thumb'> 
-                        <div className='img-wrapper'> 
-                        
-                          
-                         <img src=""/>
-                         console.log(path)
-                        
-
-
-                                                                       
+                        <div className='img-wrapper'>                                                   
+                          <img src=""/>                                                                                       
                         </div>
                         <div className='title'> 
                             {item.name}

@@ -1,8 +1,6 @@
 import React from 'react';
 
 function importAll() {
-  const path = '11'
-  // console.log(path);
   const products = [
     {
       name: 'James',
